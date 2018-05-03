@@ -42,10 +42,6 @@ public class Student implements Comparable<Student>{
 		return false;
 	}
 
-
-
-
-
 	@Override
 	public String toString() {
 		return this.studentId+";"+this.name+";"+this.surname+";"+this.group+";"+this.avarageGrade+";BELIRSIZ;"+this.attendance;
