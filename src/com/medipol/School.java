@@ -3,7 +3,7 @@ package com.medipol;
 import java.util.ArrayList;
 import java.util.List;
 
-import util.FileUtils;
+import com.medipol.util.FileUtils;
 
 public class School{
 	public String name;

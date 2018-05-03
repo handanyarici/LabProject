@@ -1,6 +1,6 @@
 package com.medipol;
 
-import util.IDGenerator;
+import com.medipol.util.IDGenerator;
 
 public class Student implements Comparable<Student>{
 	
