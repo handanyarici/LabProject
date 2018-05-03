@@ -2,7 +2,7 @@ package com.medipol;
 
 import util.IDGenerator;
 
-public class Student{
+public class Student implements Comparable<Student>{
 	
 	public String name;
 	public String studentId;
@@ -23,18 +23,20 @@ public class Student{
 		this.studentId = String.valueOf(IDGenerator.generateStudentID());
 	}
 
-	public Student(String studentId, String name, String surname) {
+	public Student(String studentId, String name, String surname, String group, double avarageGrade, boolean attendance) {
 		super();
 		this.name = name;
 		this.studentId = studentId;
 		this.surname = surname;
-		this.group="";
-		this.avarageGrade=0;
+		this.group=group;
+		this.avarageGrade=avarageGrade;
+		this.attendance = attendance;
 	}
-
-
-
-
+	
+	public Student(double avarageGrade) {
+		super();
+		this.avarageGrade = avarageGrade;
+	}
 
 	public boolean doAssignment(String assignment) { //burasý metot, boolean çünkü ödevi yapmýþ ya da yapmamýþtýr 
 		return false;
@@ -49,5 +51,14 @@ public class Student{
 		return this.studentId+";"+this.name+";"+this.surname+";"+this.group+";"+this.avarageGrade+";BELIRSIZ;"+this.attendance;
 	}
 
+	@Override
+	public int compareTo(Student o) {
+		// TODO Auto-generated method stub
+		return Double.compare(avarageGrade, o.avarageGrade);
+	}
+
+	
+
 		
+	
 }

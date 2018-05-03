@@ -30,16 +30,18 @@ public class School{
 	public Student getStudent(int studentID) {
 		return null; // ??
 }
-	public List<Student> getAllStudents() {
-		List<Student> students = new ArrayList<Student>();
+	public Student[] getAllStudents() {
 		String fileContent = FileUtils.readFile();
 		String[] satirlar = fileContent.split("\n");
+		Student[] studentArr = new Student[satirlar.length];
+		int i = 0;
 		for(String satir:satirlar) {
 			 String[] arr = satir.split(";");
-             Student s = new Student(arr[0], arr[1], arr[2]);
-             students.add(s);
+             Student s = new Student(arr[0], arr[1], arr[2],arr[5], Double.valueOf(arr[4]),Boolean.valueOf(arr[6]));
+             studentArr[i]= s;
+             i++;
 		}
-		return students;
+		return studentArr;
 	}
 
 	public void addDepartment(Department department) {
