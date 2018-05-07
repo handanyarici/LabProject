@@ -53,8 +53,6 @@ public class Student implements Comparable<Student>{
 		return Double.compare(avarageGrade, o.avarageGrade);
 	}
 
-	
-
 		
 	
 }

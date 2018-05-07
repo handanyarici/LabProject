@@ -3,6 +3,9 @@ package com.medipol;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import com.medipol.sort.MyQuickSort;
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -19,13 +22,21 @@ public class Main {
 //		school.addStudent(student1);	
 		
 		Student[] sortedStudents = school.getAllStudents();
-		Arrays.sort(sortedStudents);
+//		Arrays.sort(sortedStudents);
 //		for(Student s : sortedStudents) {
 //			System.out.println(s.toString());
 //		}
 		
+		MyQuickSort quickSort = new MyQuickSort();
+		quickSort.sort(sortedStudents);
 		
-		System.out.println(sortedStudents[Arrays.binarySearch(sortedStudents, new Student(99))]);
+		System.out.println(Arrays.toString(sortedStudents));
+		Student s = new Student(45);
+		int index = Arrays.binarySearch(sortedStudents, s);
+		System.out.println(sortedStudents[index]);
+		
+		
+//		System.out.println(sortedStudents[Arrays.binarySearch(sortedStudents, new Student(99))]);
 		
 	}
 

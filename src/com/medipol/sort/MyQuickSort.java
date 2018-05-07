@@ -1,11 +1,13 @@
 package com.medipol.sort;
 
+import com.medipol.Student;
+
 public class MyQuickSort {
     
-    private int array[];
+    private Student[] array;
     private int length;
  
-    public void sort(int[] inputArr) {
+    public void sort(Student[] inputArr) {
          
         if (inputArr == null || inputArr.length == 0) {
             return;
@@ -20,7 +22,7 @@ public class MyQuickSort {
         int i = lowerIndex;
         int j = higherIndex;
         // calculate pivot number, I am taking pivot as middle index number
-        int pivot = array[lowerIndex+(higherIndex-lowerIndex)/2];
+        int pivot = (int) array[lowerIndex+(higherIndex-lowerIndex)/2].avarageGrade;
         // Divide into two arrays
         while (i <= j) {
             /**
@@ -29,10 +31,10 @@ public class MyQuickSort {
              * from right side which is less then the pivot value. Once the search 
              * is done, then we exchange both numbers.
              */
-            while (array[i] < pivot) {
+            while (array[i].avarageGrade < pivot) {
                 i++;
             }
-            while (array[j] > pivot) {
+            while (array[j].avarageGrade > pivot) {
                 j--;
             }
             if (i <= j) {
@@ -50,19 +52,8 @@ public class MyQuickSort {
     }
  
     private void exchangeNumbers(int i, int j) {
-        int temp = array[i];
+        Student temp = array[i];
         array[i] = array[j];
         array[j] = temp;
-    }
-     
-    public static void main(String a[]){
-         
-        MyQuickSort sorter = new MyQuickSort();
-        int[] input = {24,2,45,20,56,75,2,56,99,53,12};
-        sorter.sort(input);
-        for(int i:input){
-            System.out.print(i);
-            System.out.print(" ");
-        }
     }
 }
