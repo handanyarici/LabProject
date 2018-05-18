@@ -111,8 +111,8 @@ public class SearchStudent  extends Application {
                     return;
                 }
                 
-                Student student = Menu.school.searchStudentWithMap(nameField.getText());
-                student = Menu.school.searchStudent(nameField.getText());
+                Student student = NewStudent.school.searchStudentWithMap(nameField.getText());
+                student = NewStudent.school.searchStudent(nameField.getText());
                 if(student != null) {
                 	System.out.println(student.toString());
                 }else {

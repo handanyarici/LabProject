@@ -122,6 +122,8 @@ public class Login extends Application {
                 if("admin".equalsIgnoreCase(nameField.getText()) && "admin".equalsIgnoreCase(passwordField.getText())) {
 	                NewStudent og = new NewStudent();
 	                primaryStage.getScene().setRoot(og.createRegistrationFormPane());
+//                	Menu menu = new Menu();
+//                	primaryStage.getScene().setRoot(menu.createRegistrationFormPane(primaryStage));
                 }else {
                 	showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Kullanýcý adý veya þifre yanlýþ");
                     return;

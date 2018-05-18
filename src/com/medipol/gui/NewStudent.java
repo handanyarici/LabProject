@@ -18,7 +18,7 @@ import javafx.stage.Window;
 
 public class NewStudent extends Application {
 	
-	final School school = new School("Medipol", "kavacik","0216423423432");
+	public final static School school = new School("Medipol", "kavacik","0216423423432");
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -74,7 +74,7 @@ public class NewStudent extends Application {
 
     private void addUIControls(GridPane gridPane) {
         // Add Header
-        Label headerLabel = new Label("Ogrenci Kayýt Sistemi");
+        Label headerLabel = new Label("Ogrenci Kayï¿½t Sistemi");
         headerLabel.setFont(Font.font("Arial", FontWeight.BOLD, 24));
         gridPane.add(headerLabel, 0,0,2,1);
         GridPane.setHalignment(headerLabel, HPos.CENTER);
@@ -108,7 +108,7 @@ public class NewStudent extends Application {
         notField.setPrefHeight(40);
         gridPane.add(notField, 1, 3);
         
-        Label katilimLabel = new Label("Katýlým : ");
+        Label katilimLabel = new Label("Katï¿½lï¿½m : ");
         gridPane.add(katilimLabel, 0, 4);
 
         // Add Not Field
@@ -120,7 +120,7 @@ public class NewStudent extends Application {
         gridPane.add(katilimField, 1, 4);
 
         // Add Submit Button
-        ToggleButton submitButton = new ToggleButton("Giriþ Yap");
+        ToggleButton submitButton = new ToggleButton("Giriï¿½ Yap");
         submitButton.setPrefHeight(40);
 //        submitButton.setDefaultButton(true);
         submitButton.setPrefWidth(100);
@@ -162,7 +162,7 @@ public class NewStudent extends Application {
                 Student student = new Student(nameField.getText(), soyadiField.getText(), "", katilimDurumu, not);
                 school.addStudent(student);
                 
-               showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Kayit Baþarýlý", "Welcome " + nameField.getText());
+               showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Kayit Baï¿½arï¿½lï¿½", "Welcome " + nameField.getText());
             }
         });
     }

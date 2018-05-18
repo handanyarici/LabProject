@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class FileUtils {
 	
-	public static final String FILE_NAME = "Ogrenciler.csv";
+	public static final String FILE_NAME = "C:\\Users\\handan.yarici\\Desktop\\Eclipse Oxygen\\workspace\\OgrenciBilgiSistemi\\Ogrenciler.csv";
 
 	public static void writeFile(String str) {
 		try {

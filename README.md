@@ -1,2 +1,0 @@
-# LabProject
-Öğrenci Bilgi sistemi
